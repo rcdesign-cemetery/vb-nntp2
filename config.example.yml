@@ -1,0 +1,61 @@
+# You must specify at least one `listen` or `listen_ssl` options
+# Host and port for plain connections. SSL recommended instead.
+listen: 0.0.0.0:119
+
+# Host and port for secure (SSL) connections. Uncomment to activate
+#listen_ssl: 0.0.0.0:536
+
+# Certificate & key container. Must be defined if listen_ssl activated
+#pem_file: /your/ssl/file.pem
+
+# Max. simultanious connections per listen daemon, that means that if you are
+# listening plain connections and ssl, then your daemon will accept 500 plain
+# connections and 500 ssl connections (1000 in summary) if you'll set max_conn
+# to 500. Default: 50. Don't set too large.
+#max_conn: 500
+
+# Inactivity timeout (in seconds), to close idle connections.
+# 60 seconds by default. Don't set too large.
+#timeout: 60
+
+# Process title for 'ps'. 'vb-nntp' by default
+#title: vb-nntp
+
+
+# Amount of workers. By default equals to amount of CPU cores.
+workers: 1
+
+
+# LOGGER CONFIGURATION #########################################################
+################################################################################
+
+logger:
+  enabled: yes
+  file: /var/log/vb-nntp.log
+
+  # Whenever colorize logs or not. Disabled by default
+  #colorize   : yes
+
+  # Whenever use JSON format of log events. Disabled by default.
+  #json       : yes
+
+  # Minimal message level to be logged
+  #
+  # VERBOSE     - Log whole server reply
+  # DEBUG       - Log incoming commands and responses (first string)
+  # AUTH_DEBUG  - Authentication success / failure
+  # INFO        - Start, stop, restart
+  # WARN        - Authentication error, Invalid command
+  # ERROR       - Errors
+  severity: INFO
+
+
+# ADAPTER CONFIGURATION v#######################################################
+################################################################################
+
+# Used to generate message-id
+hostname: forum.rcdesign.ru
+
+adapter: vbulletin
+
+database: username:password@host:port/database

@@ -1,0 +1,23 @@
+{
+  "name": "vb-nntp2",
+  "private": true,
+  "version": "0.0.0",
+  "description": "NNTP Gateway.",
+  "license": "MIT",
+  "repository": "rdesign/vb-nntp2",
+  "scripts": {
+    "test": "make test-all"
+  },
+  "dependencies": {
+    "js-yaml": "^3.3.0",
+    "lodash": "^3.8.0",
+    "mysql": "^2.6.2",
+    "require-all": "^1.0.0",
+    "winston": "^1.0.0"
+  },
+  "devDependencies": {
+    "eslint": "0.20.0",
+    "eslint-plugin-nodeca": "~ 1.0.3",
+    "mocha": "*"
+  }
+}
