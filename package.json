@@ -10,7 +10,7 @@
   },
   "dependencies": {
     "js-yaml": "^3.3.0",
-    "lodash": "^3.8.0",
+    "lodash": "^4.17.5",
     "mysql": "^2.6.2",
     "require-all": "^1.0.0",
     "winston": "^1.0.0"
